@@ -3,6 +3,37 @@ body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     height: 100%;
 }
+ td {
+ border : 1px solid black;
+ width: 100px;
+ height: 100px;
+ }
+ .red {
+ 	width: 100px;
+ 	height: 100px;
+ 	background: red;
+ 	border-radius: 50px;
+ }
+ .black {
+ 	width: 100px;
+ 	height: 100px;
+ 	background: black;
+ 	border-radius: 50px;
+ }
+ .board {
+     width: 744px;
+     margin: 0 auto ;
+ }
+ .below {
+     text-align: center;
+ }
+ h1 {
+     text-align: center;
+ }
+ .chooser {
+     text-align: center;
+ }
+
 .navbar {
   margin-bottom: 10px;
   border-radius: 0px;

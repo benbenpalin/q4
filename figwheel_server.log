@@ -1,0 +1,122 @@
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 2.634 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/q4/events.cljs   line:85  column:2  ----[0m
+
+  [1mUse of undeclared Var q4.events/reg-event-fx[0m
+
+  [36m81[0m  [36m          (map #(four-in-a-row? board % game) s)[0m
+  [36m82[0m  [36m          (set s)[0m
+  [36m83[0m  [36m          (s true))))[0m
+  [36m84[0m  [36m[0m
+  [33m85[0m  [1m(reg-event-fx[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var q4.events/reg-event-fx[0m
+  [36m86[0m  [36m  :check-board[0m
+  [36m87[0m  [36m  (fn [{:keys [db]}][0m
+  [36m88[0m  [36m    (let [colors {:r "Red" :b "Black"}][0m
+  [36m89[0m  [36m      (if (winning-board (:board db) (:game db))[0m
+  [36m90[0m  [36m        {:db (assoc db :alert (str ((:turn db) colors) " Wins!") :active false)}[0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/events.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/q4/events.cljs   line:109  column:2  ----[0m
+
+  [1mUse of undeclared Var q4.events/reg-event-fx[0m
+
+  [36m105[0m  [36m        (recur (dec row))[0m
+  [36m106[0m  [36m        [row column])[0m
+  [36m107[0m  [36m      "full row")))[0m
+  [36m108[0m  [36m[0m
+  [33m109[0m  [1m(reg-event-fx[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var q4.events/reg-event-fx[0m
+  [36m110[0m  [36m  :select-column[0m
+  [36m111[0m  [36m  (fn [{:keys [db]} [_ space]][0m
+  [36m112[0m  [36m    (let [empty-space (find-empty-space space (:board db))][0m
+  [36m113[0m  [36m      (if (not= empty-space "full row")[0m
+  [36m114[0m  [36m        {:db (update db :board #(assoc-in % empty-space (:turn db)))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/events.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/q4/events.cljs   line:118  column:2  ----[0m
+
+  [1mUse of undeclared Var q4.events/reg-event-fx[0m
+
+  [36m114[0m  [36m        {:db (update db :board #(assoc-in % empty-space (:turn db)))[0m
+  [36m115[0m  [36m         :dispatch [::check-board]}[0m
+  [36m116[0m  [36m        {:db (assoc db :alert "This column is full, select a different one")}))))[0m
+  [36m117[0m  [36m[0m
+  [33m118[0m  [1m(reg-event-fx[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var q4.events/reg-event-fx[0m
+  [36m119[0m  [36m  :play-again[0m
+  [36m120[0m  [36m  (fn [{:keys [db]} _][0m
+  [36m121[0m  [36m    {:dispatch [::initialize-db]}))[0m
+  [36m122[0m  [36m[0m
+  [36m123[0m  [36m(reg-event-db[0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/events.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.668 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/q4/events.cljs   line:85  column:2  ----[0m
+
+  [1mUse of undeclared Var q4.events/reg-event-fx[0m
+
+  [36m81[0m  [36m          (map #(four-in-a-row? board % game) s)[0m
+  [36m82[0m  [36m          (set s)[0m
+  [36m83[0m  [36m          (s true))))[0m
+  [36m84[0m  [36m[0m
+  [33m85[0m  [1m(reg-event-fx[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var q4.events/reg-event-fx[0m
+  [36m86[0m  [36m  :check-board[0m
+  [36m87[0m  [36m  (fn [{:keys [db]}][0m
+  [36m88[0m  [36m    (let [colors {:r "Red" :b "Black"}][0m
+  [36m89[0m  [36m      (if (winning-board (:board db) (:game db))[0m
+  [36m90[0m  [36m        {:db (assoc db :alert (str ((:turn db) colors) " Wins!") :active false)}[0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/events.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/q4/events.cljs   line:109  column:2  ----[0m
+
+  [1mUse of undeclared Var q4.events/reg-event-fx[0m
+
+  [36m105[0m  [36m        (recur (dec row))[0m
+  [36m106[0m  [36m        [row column])[0m
+  [36m107[0m  [36m      "full row")))[0m
+  [36m108[0m  [36m[0m
+  [33m109[0m  [1m(reg-event-fx[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var q4.events/reg-event-fx[0m
+  [36m110[0m  [36m  :select-column[0m
+  [36m111[0m  [36m  (fn [{:keys [db]} [_ space]][0m
+  [36m112[0m  [36m    (let [empty-space (find-empty-space space (:board db))][0m
+  [36m113[0m  [36m      (if (not= empty-space "full row")[0m
+  [36m114[0m  [36m        {:db (update db :board #(assoc-in % empty-space (:turn db)))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/events.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/q4/events.cljs   line:118  column:2  ----[0m
+
+  [1mUse of undeclared Var q4.events/reg-event-fx[0m
+
+  [36m114[0m  [36m        {:db (update db :board #(assoc-in % empty-space (:turn db)))[0m
+  [36m115[0m  [36m         :dispatch [:check-board]}[0m
+  [36m116[0m  [36m        {:db (assoc db :alert "This column is full, select a different one")}))))[0m
+  [36m117[0m  [36m[0m
+  [33m118[0m  [1m(reg-event-fx[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var q4.events/reg-event-fx[0m
+  [36m119[0m  [36m  :play-again[0m
+  [36m120[0m  [36m  (fn [{:keys [db]} _][0m
+  [36m121[0m  [36m    {:dispatch [:initialize-db]}))[0m
+  [36m122[0m  [36m[0m
+  [36m123[0m  [36m(reg-event-db[0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/events.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 3.21 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.494 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.js
