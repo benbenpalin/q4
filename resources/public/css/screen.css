@@ -2,11 +2,12 @@ html,
 body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     height: 100%;
+    background: radial-gradient(white, dodgerblue, darkblue);
 }
  td {
- border : 1px solid black;
- width: 100px;
- height: 100px;
+ border : 1px solid darkblue;
+ width: 103px;
+ height: 103px;
  }
  .red {
  	width: 100px;
@@ -33,35 +34,6 @@ body {
  .chooser {
      text-align: center;
  }
-
-.navbar {
-  margin-bottom: 10px;
-  border-radius: 0px;
-}
-.navbar-brand {
-  float: none;
-}
-.navbar-nav .nav-item {
-  float: none;
-}
-.navbar-divider,
-.navbar-nav .nav-item+.nav-item,
-.navbar-nav .nav-link + .nav-link {
-  margin-left: 0;
-}
-@media (min-width: 34em) {
-  .navbar-brand {
-    float: left;
-  }
-  .navbar-nav .nav-item {
-    float: left;
-  }
-  .navbar-divider,
-  .navbar-nav .nav-item+.nav-item,
-  .navbar-nav .nav-link + .nav-link {
-    margin-left: 1rem;
-  }
-}
 
 @-moz-keyframes three-quarters-loader {
     0% {

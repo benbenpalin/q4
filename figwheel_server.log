@@ -120,3 +120,9 @@ notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.j
 notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
 notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
 notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.js
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css

@@ -10,25 +10,6 @@
             [q4.events])
   (:import goog.History))
 
-(defn nav-link [uri title page]
-  [:li.nav-item
-   {:class (when (= page @(rf/subscribe [:page])) "active")}
-   [:a.nav-link {:href uri} title]])
-
-(defn navbar []
-  [:nav.navbar.navbar-dark.bg-primary.navbar-expand-md
-   {:role "navigation"}
-   [:button.navbar-toggler.hidden-sm-up
-    {:type "button"
-     :data-toggle "collapse"
-     :data-target "#collapsing-navbar"}
-    [:span.navbar-toggler-icon]]
-   [:a.navbar-brand {:href "#/"} "q4"]
-   [:div#collapsing-navbar.collapse.navbar-collapse
-    [:ul.nav.navbar-nav.mr-auto
-     [nav-link "#/" "Home" :home]
-     [nav-link "#/about" "About" :about]]]])
-
 (defn add-row-element [vect]
   "Given a vector of [:td _] vectors, this function adds :tr to groups of 7"
   (loop [i       0
@@ -94,23 +75,15 @@
             {:on-click #(rf/dispatch [:play-again])}
             "Play again"])]])]))
 
-(defn about-page []
-  [:div.container
-   [:div.row
-    [:div.col-md-12
-     [:img {:src (str js/context "/img/warning_clojure.png")}]]]])
-
 (defn home-page []
   [:div.container
    [main-panel]])
 
 (def pages
-  {:home #'home-page
-   :about #'about-page})
+  {:home #'home-page})
 
 (defn page []
   [:div
-   [navbar]
    [(pages @(rf/subscribe [:page]))]])
 
 ;; -------------------------
@@ -119,9 +92,6 @@
 
 (secretary/defroute "/" []
   (rf/dispatch [:set-active-page :home]))
-
-(secretary/defroute "/about" []
-  (rf/dispatch [:set-active-page :about]))
 
 ;; -------------------------
 ;; History
