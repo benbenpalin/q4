@@ -6,8 +6,8 @@ body {
 }
  td {
  border : 2px solid darkblue;
- width: 103px;
- height: 103px;
+ width: 104px;
+ height: 104px;
  }
  .red {
  	width: 100px;
@@ -22,8 +22,8 @@ body {
  	border-radius: 50px;
  }
  .board {
-     width: 725px;
-     height: 621px;
+     width: 730px;
+     height: 626px;
      margin: 0 auto;
      background-color: rgba(0,0,255,0.4)
  }
