@@ -35,6 +35,87 @@ body {
      text-align: center;
  }
 
+.perp {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+ .top-left-out {
+   height: 50vh;
+   display: inline;
+   float: left;
+   width: 50vw;
+   border-bottom: 10px solid lightblue;
+   border-right: 10px solid lightblue;
+   border-bottom-right-radius: 80%;
+ }
+ .top-left-in {
+   height: 45vh;
+   width: 47.5vw;
+   border-bottom: 10px solid lightblue;
+   border-right: 10px solid lightblue;
+   border-bottom-right-radius: 80%;
+ }
+
+ .top-right-out {
+   height: 50vh;
+   float: right;
+   width: 50vw;
+   border-bottom: 10px solid lightblue;
+   border-left: 10px solid lightblue;
+   border-bottom-left-radius: 80%;
+ }
+ .top-right-in {
+   height: 45vh;
+   float: right;
+   width: 47.5vw;
+   border-bottom: 10px solid lightblue;
+   border-left: 10px solid lightblue;
+   border-bottom-left-radius: 80%;
+ }
+
+ .bottom-left-out {
+    height: 50vh;
+    display: inline;
+    float: left;
+    width: 50vw;
+    border-top: 10px solid lightblue;
+    border-right: 10px solid lightblue;
+    border-top-right-radius: 80%;
+  }
+ .bottom-left-in {
+    height: 45vh;
+    width: 47.5vw;
+    position: absolute;
+    bottom: 0;
+    border-top: 10px solid lightblue;
+    border-right: 10px solid lightblue;
+    border-top-right-radius: 80%;
+  }
+
+ .bottom-right-out {
+    height: 50vh;
+    float: right;
+    width: 50vw;
+    border-top: 10px solid lightblue;
+    border-left: 10px solid lightblue;
+    border-top-left-radius: 80%;
+  }
+ .bottom-right-in {
+    height: 45vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 47.5vw;
+    border-top: 10px solid lightblue;
+    border-left: 10px solid lightblue;
+    border-top-left-radius: 80%;
+  }
+
+
 @-moz-keyframes three-quarters-loader {
     0% {
         -moz-transform: rotate(0deg);

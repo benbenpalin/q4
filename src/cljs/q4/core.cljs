@@ -53,30 +53,46 @@
    [:div {:on-click #(rf/dispatch [:choose-game :quasi])}  "Quasi"]
    [:div {:on-click #(rf/dispatch [:choose-game :quantum])} "Quantum"]])
 
+(defn bg-perp []
+  [:div.perp
+   [:div.top-row
+    [:div.top-left-out
+     [:div.top-left-in]]
+    [:div.top-right-out
+     [:div.top-right-in]]]
+   [:div.bottom-row
+    [:div.bottom-left-out
+     [:div.bottom-left-in]]
+    [:div.bottom-right-out
+     [:div.bottom-right-in]]]])
+
 (defn main-panel []
   (let [chosen? @(rf/subscribe [:game-chosen])
         active? @(rf/subscribe [:active])]
     [:div
-     [:h1 "Quantum Four"]
-     (if-not chosen?
-       [game-chooser chosen?]
-       [:div
-        [:div.board
-         [table-board]]
-        [:div.below
-         [:p "Turn: "
-          (let [turn @(rf/subscribe [:turn])]
-            (if (= turn :r)
-              "Red"
-              "Black"))]
-         [:p "Alerts: " @(rf/subscribe [:alert])]
-         (if-not active?
-           [:p
-            {:on-click #(rf/dispatch [:play-again])}
-            "Play again"])]])]))
+     [bg-perp]
+     [:div.main
+      [:h1 "Quantum Four"]
+      (if-not chosen?
+        [game-chooser chosen?]
+        [:div
+
+         [:div.board
+          [table-board]]
+         [:div.below
+          [:p "Turn: "
+           (let [turn @(rf/subscribe [:turn])]
+             (if (= turn :r)
+               "Red"
+               "Black"))]
+          [:p "Alerts: " @(rf/subscribe [:alert])]
+          (if-not active?
+            [:p
+             {:on-click #(rf/dispatch [:play-again])}
+             "Play again"])]])]]))
 
 (defn home-page []
-  [:div.container
+  [:div
    [main-panel]])
 
 (def pages
