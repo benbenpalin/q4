@@ -5,9 +5,9 @@ body {
     background: radial-gradient(white, dodgerblue, darkblue);
 }
  td {
- border : 1px solid darkblue;
- width: 103px;
- height: 103px;
+ border : 2px solid darkblue;
+ width: 104px;
+ height: 104px;
  }
  .red {
  	width: 100px;
@@ -22,8 +22,10 @@ body {
  	border-radius: 50px;
  }
  .board {
-     width: 744px;
-     margin: 0 auto ;
+     width: 730px;
+     height: 626px;
+     margin: 0 auto;
+     background-color: rgba(0,0,255,0.4)
  }
  .below {
      text-align: center;
@@ -34,6 +36,92 @@ body {
  .chooser {
      text-align: center;
  }
+.perp {
+  margin-left: auto;
+  margin-right: auto;
+  height: 99vh;
+  width: 99vw;
+  position: relative;
+  overflow: scrollbar;
+}
+.main-page {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;use
+  margin: auto;
+}
+
+ .top-left-out {
+   height: 49vh;
+   display: inline;
+   float: left;
+   width: 49.5vw;
+   border-bottom: 10px solid lightblue;
+   border-right: 10px solid lightblue;
+   border-bottom-right-radius: 80%;
+ }
+ .top-left-in {
+   height: 44.5vh;
+   width: 47vw;
+   border-bottom: 10px solid lightblue;
+   border-right: 10px solid lightblue;
+   border-bottom-right-radius: 80%;
+ }
+ .top-right-out {
+   height: 49vh;
+   float: right;
+   width: 49.5vw;
+   border-bottom: 10px solid lightblue;
+   border-left: 10px solid lightblue;
+   border-bottom-left-radius: 80%;
+ }
+ .top-right-in {
+   height: 44.5vh;
+   float: right;
+   width: 47vw;
+   border-bottom: 10px solid lightblue;
+   border-left: 10px solid lightblue;
+   border-bottom-left-radius: 80%;
+ }
+
+ .bottom-left-out {
+    height: 50vh;
+    display: inline;
+    float: left;
+    width: 49.5vw;
+    border-top: 10px solid lightblue;
+    border-right: 10px solid lightblue;
+    border-top-right-radius: 80%;
+  }
+ .bottom-left-in {
+    height: 45.5vh;
+    width: 47vw;
+    position: absolute;
+    bottom: 0;
+    border-top: 10px solid lightblue;
+    border-right: 10px solid lightblue;
+    border-top-right-radius: 80%;
+  }
+ .bottom-right-out {
+    height: 50vh;
+    float: right;
+    width: 49.5vw;
+    border-top: 10px solid lightblue;
+    border-left: 10px solid lightblue;
+    border-top-left-radius: 80%;
+  }
+ .bottom-right-in {
+    height: 45.5vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 47vw;
+    border-top: 10px solid lightblue;
+    border-left: 10px solid lightblue;
+    border-top-left-radius: 80%;
+  }
 
 @-moz-keyframes three-quarters-loader {
     0% {
