@@ -76,7 +76,6 @@
       (if-not chosen?
         [game-chooser chosen?]
         [:div
-
          [:div.board
           [table-board]]
          [:div.below

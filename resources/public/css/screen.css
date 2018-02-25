@@ -5,7 +5,7 @@ body {
     background: radial-gradient(white, dodgerblue, darkblue);
 }
  td {
- border : 1px solid darkblue;
+ border : 2px solid darkblue;
  width: 103px;
  height: 103px;
  }
@@ -21,9 +21,16 @@ body {
  	background: black;
  	border-radius: 50px;
  }
+
  .board {
-     width: 744px;
-     margin: 0 auto ;
+     width: 725px;
+     height: 621px;
+     margin: 0 auto;
+     background-color: rgba(0,0,255,0.4)
+ }
+ .tabe {
+
+     position: absolute;
  }
  .below {
      text-align: center;
