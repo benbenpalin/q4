@@ -43,6 +43,15 @@ body {
   position: relative;
 }
 
+.main-page {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  margin: auto;
+}
+
  .top-left-out {
    height: 50vh;
    display: inline;

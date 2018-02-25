@@ -71,7 +71,7 @@
         active? @(rf/subscribe [:active])]
     [:div
      [bg-perp]
-     [:div.main
+     [:div.main-page
       [:h1 "Quantum Four"]
       (if-not chosen?
         [game-chooser chosen?]
