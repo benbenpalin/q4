@@ -21,16 +21,11 @@ body {
  	background: black;
  	border-radius: 50px;
  }
-
  .board {
      width: 725px;
      height: 621px;
      margin: 0 auto;
      background-color: rgba(0,0,255,0.4)
- }
- .tabe {
-
-     position: absolute;
  }
  .below {
      text-align: center;
@@ -41,7 +36,6 @@ body {
  .chooser {
      text-align: center;
  }
-
 .perp {
   margin-left: auto;
   margin-right: auto;
@@ -49,7 +43,6 @@ body {
   width: 100vw;
   position: relative;
 }
-
 .main-page {
   top: 0;
   right: 0;
@@ -75,7 +68,6 @@ body {
    border-right: 10px solid lightblue;
    border-bottom-right-radius: 80%;
  }
-
  .top-right-out {
    height: 50vh;
    float: right;
@@ -111,7 +103,6 @@ body {
     border-right: 10px solid lightblue;
     border-top-right-radius: 80%;
   }
-
  .bottom-right-out {
     height: 50vh;
     float: right;
@@ -130,7 +121,6 @@ body {
     border-left: 10px solid lightblue;
     border-top-left-radius: 80%;
   }
-
 
 @-moz-keyframes three-quarters-loader {
     0% {
