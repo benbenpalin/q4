@@ -8,7 +8,6 @@
             [ajax.core :refer [GET POST]]
             [q4.ajax :refer [load-interceptors!]]
             [q4.events])
-
   (:import goog.History))
 
 (defn add-row-element [vect]
@@ -67,6 +66,12 @@
     [:div.bottom-right-out
      [:div.bottom-right-in]]]])
 
+(defn hover []
+  [:div
+   [:table {:style {:margin "auto"}}
+    [:tr
+     [:td][:td][:td][:td][:td][:td][:td]]]])
+
 (defn main-panel []
   (let [chosen? @(rf/subscribe [:game-chosen])
         active? @(rf/subscribe [:active])]
@@ -77,6 +82,7 @@
       (if-not chosen?
         [game-chooser chosen?]
         [:div
+         [hover]
          [:div.board
           [table-board]]
          [:div.below
