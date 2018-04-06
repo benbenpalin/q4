@@ -487,3 +487,114 @@ Notifying browser that CSS file changed: resources/public/css/screen.css
 [32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.044 seconds.[0m
 notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
 Notifying browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.159 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.996 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.914 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/q4/core.cljs   line:56  column:22  ----[0m
+
+  [1mUse of undeclared Var q4.core/hover-cell[0m
+
+  [36m52[0m  [36m  (let [hover-col @(rf/subscribe [:hover-cell])])[0m
+  [36m53[0m  [36m  [:div[0m
+  [36m54[0m  [36m   [:table {:style {:margin "auto"}}[0m
+  [36m55[0m  [36m    [:tr[0m
+  [33m56[0m  [1m     [:td.hover-cell hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]]])[0m
+  [0m  [0m  [33m                     ^--- Use of undeclared Var q4.core/hover-cell[0m
+  [36m57[0m  [36m[0m
+  [36m58[0m  [36m(defn game-chooser [][0m
+  [36m59[0m  [36m  [:div.chooser "What do you want to play?"[0m
+  [36m60[0m  [36m   [:div {:on-click #(rf/dispatch [:choose-game :quaint])} "Quaint"][0m
+  [36m61[0m  [36m   [:div {:on-click #(rf/dispatch [:choose-game :quasi])}  "Quasi"][0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.079 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/q4/core.cljs   line:56  column:22  ----[0m
+
+  [1mUse of undeclared Var q4.core/hover-col[0m
+
+  [36m52[0m  [36m  (let [hover-col @(rf/subscribe [:hover-cell])])[0m
+  [36m53[0m  [36m  [:div[0m
+  [36m54[0m  [36m   [:table {:style {:margin "auto"}}[0m
+  [36m55[0m  [36m    [:tr[0m
+  [33m56[0m  [1m     [:td.hover-cell hover-col][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]]])[0m
+  [0m  [0m  [33m                     ^--- Use of undeclared Var q4.core/hover-col[0m
+  [36m57[0m  [36m[0m
+  [36m58[0m  [36m(defn game-chooser [][0m
+  [36m59[0m  [36m  [:div.chooser "What do you want to play?"[0m
+  [36m60[0m  [36m   [:div {:on-click #(rf/dispatch [:choose-game :quaint])} "Quaint"][0m
+  [36m61[0m  [36m   [:div {:on-click #(rf/dispatch [:choose-game :quasi])}  "Quasi"][0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.159 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.258 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.035 seconds.[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.684 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.025 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.361 seconds.[0m
+[36m----  Could not Read  src/cljs/q4/core.cljs   line:37  column:63  ----[0m
+
+  [1mDuplicate key: :on-click[0m
+
+  [36m35[0m  [36m            (when active?[0m
+  [36m36[0m  [36m              {:on-click #(rf/dispatch [:select-column space])[0m
+  [33m37[0m  [1m               :on-click #(rf/dispatch [:hover-column space])})[0m
+  [0m  [0m  [33m                                                              ^--- Duplicate key: :on-click[0m
+  [36m38[0m  [36m            (circle space-value))))[0m
+  [36m39[0m  [36m[0m
+  [36m40[0m  [36m(defn table-board [][0m
+
+[36m----  Reader Error : Please see src/cljs/q4/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.892 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.007 seconds.[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.691 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.07 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.871 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.273 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.438 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.02 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.07 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.903 seconds.[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.812 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.9 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js

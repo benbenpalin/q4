@@ -33,7 +33,8 @@
   (let [space-value (get-in board space)]
     (vector :td.board-cell
             (when active?
-              {:on-click #(rf/dispatch [:select-column space])})
+              {:on-click #(rf/dispatch [:select-column space])
+               :on-mouse-over #(rf/dispatch [:hover-column space])})
             (circle space-value))))
 
 (defn table-board []
@@ -46,6 +47,13 @@
         board-vector (vec (map #(make-space % current-board winner?) board-numbers))]
     [:table>tbody
      (add-row-element board-vector)]))
+
+(defn hover []
+  (let [hover-col @(rf/subscribe [:hover-cell])]
+    [:div
+     [:table {:style {:margin "auto"}}
+      [:tr
+       [:td.hover-cell (str hover-col)][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]]]))
 
 (defn game-chooser []
   [:div.chooser "What do you want to play?"
@@ -65,12 +73,6 @@
      [:div.bottom-left-in]]
     [:div.bottom-right-out
      [:div.bottom-right-in]]]])
-
-(defn hover []
-  [:div
-   [:table {:style {:margin "auto"}}
-    [:tr
-     [:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]]])
 
 (defn main-panel []
   (let [chosen? @(rf/subscribe [:game-chosen])

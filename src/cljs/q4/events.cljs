@@ -115,6 +115,11 @@
          :dispatch [:check-board]}
         {:db (assoc db :alert "This column is full, select a different one")}))))
 
+(reg-event-db
+  :hover-column
+  (fn [db [_ space]]
+    (assoc db :hover-cell space)))
+
 (reg-event-fx
   :play-again
   (fn [{:keys [db]} _]
@@ -166,3 +171,10 @@
   :game-chosen
   (fn [db]
     (:game-chosen db)))
+
+(reg-sub
+  :hover-cell
+  (fn [db]
+    (:hover-cell db)))
+
+
