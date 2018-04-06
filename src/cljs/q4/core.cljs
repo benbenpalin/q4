@@ -8,6 +8,7 @@
             [ajax.core :refer [GET POST]]
             [q4.ajax :refer [load-interceptors!]]
             [q4.events])
+
   (:import goog.History))
 
 (defn add-row-element [vect]
