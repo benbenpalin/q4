@@ -49,11 +49,15 @@
      (add-row-element board-vector)]))
 
 (defn hover []
-  (let [hover-col @(rf/subscribe [:hover-cell])]
+  (let [[hov-row hov-col] @(rf/subscribe [:hover-cell])
+        color             @(rf/subscribe [:turn])]
     [:div
      [:table {:style {:margin "auto"}}
-      [:tr
-       [:td.hover-cell (str hover-col)][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]]]))
+      (update
+        [:tr
+         [:td.hover-cell ][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]
+        (inc hov-col)
+        #(conj % (circle color)))]]))
 
 (defn game-chooser []
   [:div.chooser "What do you want to play?"

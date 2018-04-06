@@ -598,3 +598,53 @@ notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
 [0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
 [32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.9 seconds.[0m
 notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.992 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.908 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/q4/core.cljs   line:55  column:7  ----[0m
+
+  [1mWrong number of args (0) passed to cljs.core/update[0m
+
+  [36m51[0m  [36m(defn hover [][0m
+  [36m52[0m  [36m  (let [[hov-row hov-col] @(rf/subscribe [:hover-cell])][0m
+  [36m53[0m  [36m    [:div[0m
+  [36m54[0m  [36m     [:table {:style {:margin "auto"}}[0m
+  [33m55[0m  [1m      (update )[0m
+  [0m  [0m  [33m      ^--- Wrong number of args (0) passed to cljs.core/update[0m
+  [36m56[0m  [36m      [:tr[0m
+  [36m57[0m  [36m       [:td.hover-cell ][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]]]))[0m
+  [36m58[0m  [36m[0m
+  [36m59[0m  [36m(defn game-chooser [][0m
+  [36m60[0m  [36m  [:div.chooser "What do you want to play?"[0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.328 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.173 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.323 seconds.[0m
+[36m----  Could not Read  src/cljs/q4/core.cljs   line:59 ----[0m
+
+  [1m/home/benpalin/proj/q4/src/cljs/q4/core.cljs [line 59, col 31] Invalid reader tag: (str hov-col). Reader tags must be symbols.[0m
+
+  [36m57[0m  [36m         [:td.hover-cell ][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]][0m
+  [36m58[0m  [36m        (inc hov-col)[0m
+  [33m59[0m  [1m        #(conj # (str hov-col)))]]))[0m
+  [0m  [0m  [33m        /home/benpalin/proj/q4/src/cljs/q4/core.cljs [line 59, col 31] Invalid reader tag: (str hov-col). Reader tags must be symbols.[0m
+  [36m60[0m  [36m[0m
+  [36m61[0m  [36m(defn game-chooser [][0m
+  [36m62[0m  [36m  [:div.chooser "What do you want to play?"[0m
+
+[36m----  Reader Error : Please see src/cljs/q4/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.827 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.959 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
