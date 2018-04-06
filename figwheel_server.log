@@ -727,3 +727,43 @@ notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
 notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
 Notifying browser that CSS file changed: resources/public/css/screen.css
 Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.853 seconds.[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.795 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.927 seconds.[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.802 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/q4/core.cljs   line:57  column:9  ----[0m
+
+  [1mUse of undeclared Var q4.core/active[0m
+
+  [36m53[0m  [36m   [:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]])[0m
+  [36m54[0m  [36m[0m
+  [36m55[0m  [36m(defn make-hover-cell [cell][0m
+  [36m56[0m  [36m  (let [color @(rf/subscribe [:turn])][0m
+  [33m57[0m  [1m    (if active[0m
+  [0m  [0m  [33m        ^--- Use of undeclared Var q4.core/active[0m
+  [36m58[0m  [36m      (conj cell (circle color))[0m
+  [36m59[0m  [36m      cell)))[0m
+  [36m60[0m  [36m[0m
+  [36m61[0m  [36m(defn hover [][0m
+  [36m62[0m  [36m  (let [[hov-row hov-col] @(rf/subscribe [:hover-cell])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.939 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.766 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.794 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.839 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/events.js

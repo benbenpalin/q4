@@ -48,19 +48,26 @@
     [:table>tbody
      (add-row-element board-vector)]))
 
+(def hover-table
+  [:tr
+   [:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]])
+
+(defn make-hover-cell
+  "Takes a cell of the hover table. If the game is active, it adds the color div to the cell.
+  If not active, returns cell"
+  [cell]
+  (let [color  @(rf/subscribe [:turn])
+        active @(rf/subscribe [:active])]
+    (if active
+      (conj cell (circle color))
+      cell)))
+
 (defn hover []
   (let [[hov-row hov-col] @(rf/subscribe [:hover-cell])
-        color             @(rf/subscribe [:turn])
         active            @(rf/subscribe [:active])]
     [:div
      [:table {:style {:margin "auto"}}
-      (update
-        [:tr
-         [:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]
-        (inc hov-col)
-        #(if active
-           (conj % (circle color))
-           %))]]))
+      (update hover-table (inc hov-col) make-hover-cell)]]))
 
 (defn game-chooser []
   [:div.chooser "What do you want to play?"

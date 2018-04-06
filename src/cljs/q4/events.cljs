@@ -176,5 +176,3 @@
   :hover-cell
   (fn [db]
     (:hover-cell db)))
-
-
