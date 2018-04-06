@@ -31,9 +31,10 @@
   "Given a space and a board, this function creates the HTML for the table cell,
    it's action, and it's value"
   (let [space-value (get-in board space)]
-    (vector :td
+    (vector :td.board-cell
             (when active?
-              {:on-click #(rf/dispatch [:select-column space])})
+              {:on-click #(rf/dispatch [:select-column space])
+               :on-mouse-over #(rf/dispatch [:hover-column space])})
             (circle space-value))))
 
 (defn table-board []
@@ -46,6 +47,27 @@
         board-vector (vec (map #(make-space % current-board winner?) board-numbers))]
     [:table>tbody
      (add-row-element board-vector)]))
+
+(def hover-table
+  [:tr
+   [:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]])
+
+(defn make-hover-cell
+  "Takes a cell of the hover table. If the game is active, it adds the color div to the cell.
+  If not active, returns cell"
+  [cell]
+  (let [color  @(rf/subscribe [:turn])
+        active @(rf/subscribe [:active])]
+    (if active
+      (conj cell (circle color))
+      cell)))
+
+(defn hover []
+  (let [[hov-row hov-col] @(rf/subscribe [:hover-cell])
+        active            @(rf/subscribe [:active])]
+    [:div
+     [:table {:style {:margin "auto"}}
+      (update hover-table (inc hov-col) make-hover-cell)]]))
 
 (defn game-chooser []
   [:div.chooser "What do you want to play?"
@@ -76,6 +98,7 @@
       (if-not chosen?
         [game-chooser chosen?]
         [:div
+         [hover]
          [:div.board
           [table-board]]
          [:div.below
