@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1266850d-4c4d-4f53-b9c4-35f0b6b00628" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/figwheel_server.log" afterPath="$PROJECT_DIR$/figwheel_server.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/public/css/screen.css" afterPath="$PROJECT_DIR$/resources/public/css/screen.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cljs/q4/core.cljs" afterPath="$PROJECT_DIR$/src/cljs/q4/core.cljs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +48,8 @@
       <file leaf-file-name="core.cljs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cljs/q4/core.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+            <state relative-caret-position="594">
+              <caret line="72" column="112" lean-forward="true" selection-start-line="72" selection-start-column="112" selection-end-line="72" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -57,8 +58,8 @@
       <file leaf-file-name="screen.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/public/css/screen.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="252">
+              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -619,16 +620,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/public/css/screen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="252">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cljs/q4/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+        <state relative-caret-position="594">
+          <caret line="72" column="112" lean-forward="true" selection-start-line="72" selection-start-column="112" selection-end-line="72" selection-end-column="112" />
           <folding />
         </state>
       </provider>

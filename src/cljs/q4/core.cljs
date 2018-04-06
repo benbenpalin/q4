@@ -31,7 +31,7 @@
   "Given a space and a board, this function creates the HTML for the table cell,
    it's action, and it's value"
   (let [space-value (get-in board space)]
-    (vector :td
+    (vector :td.board-cell
             (when active?
               {:on-click #(rf/dispatch [:select-column space])})
             (circle space-value))))
@@ -70,7 +70,7 @@
   [:div
    [:table {:style {:margin "auto"}}
     [:tr
-     [:td][:td][:td][:td][:td][:td][:td]]]])
+     [:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]]])
 
 (defn main-panel []
   (let [chosen? @(rf/subscribe [:game-chosen])
