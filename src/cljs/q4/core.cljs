@@ -50,14 +50,17 @@
 
 (defn hover []
   (let [[hov-row hov-col] @(rf/subscribe [:hover-cell])
-        color             @(rf/subscribe [:turn])]
+        color             @(rf/subscribe [:turn])
+        active            @(rf/subscribe [:active])]
     [:div
      [:table {:style {:margin "auto"}}
       (update
         [:tr
-         [:td.hover-cell ][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]
+         [:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]]
         (inc hov-col)
-        #(conj % (circle color)))]]))
+        #(if active
+           (conj % (circle color))
+           %))]]))
 
 (defn game-chooser []
   [:div.chooser "What do you want to play?"

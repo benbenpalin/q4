@@ -5,13 +5,13 @@ body {
     background: radial-gradient(white, dodgerblue, darkblue);
 }
  .board-cell {
- border : 2px solid darkblue;
- width: 104px;
- height: 104px;
+   border : 2px solid darkblue;
+   width: 104px;
+   height: 104px;
  }
-  .hover-cell {
-  width: 104px;
-  height: 104px;
+ .hover-cell {
+    width: 104px;
+    height: 104px;
   }
  .red {
  	width: 100px;

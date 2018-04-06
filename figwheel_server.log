@@ -648,3 +648,82 @@ notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
 [0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
 [32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.959 seconds.[0m
 notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.881 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.836 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.909 seconds.[0m
+[36m----  Could not Read  src/cljs/q4/core.cljs   line:63 ----[0m
+
+  [1m/home/benpalin/proj/q4/src/cljs/q4/core.cljs [line 63, col 35] Invalid reader tag: (conj % (...)). Reader tags must be symbols.[0m
+
+  [36m61[0m  [36m        (inc hov-col)[0m
+  [36m62[0m  [36m        #;(when active[0m
+  [33m63[0m  [1m           (conj % (circle color)))]]))[0m
+  [0m  [0m  [33m           /home/benpalin/proj/q4/src/cljs/q4/core.cljs [line 63, col 35] Invalid reader tag: (conj % (...)). Reader tags must be symbols.[0m
+  [36m64[0m  [36m[0m
+  [36m65[0m  [36m(defn game-chooser [][0m
+  [36m66[0m  [36m  [:div.chooser "What do you want to play?"[0m
+
+[36m----  Reader Error : Please see src/cljs/q4/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/q4/core.cljs   line:58  column:7  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/update[0m
+
+  [36m54[0m  [36m        active            @(rf/subscribe [:active])][0m
+  [36m55[0m  [36m    [:div[0m
+  [36m56[0m  [36m     [:table {:style {:margin "auto"}}[0m
+  [36m57[0m  [36m[0m
+  [33m58[0m  [1m      (update[0m
+  [0m  [0m  [33m      ^--- Wrong number of args (2) passed to cljs.core/update[0m
+  [36m59[0m  [36m        [:tr[0m
+  [36m60[0m  [36m         [:td.hover-cell ][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]][0m
+  [36m61[0m  [36m        (inc hov-col[0m
+  [36m62[0m  [36m        ;#(when active[0m
+  [36m63[0m  [36m           #(conj % (circle color))))]]))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/q4/core.cljs  ----[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.342 seconds.[0m
+[36m----  Could not Analyze  src/cljs/q4/core.cljs   line:61  column:9  ----[0m
+
+  [1mWrong number of args (2) passed to: core/inc[0m
+
+  [36m59[0m  [36m[:tr[0m
+  [36m60[0m  [36m [:td.hover-cell ][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell][:td.hover-cell]][0m
+  [33m61[0m  [1m(inc hov-col[0m
+  [0m  [0m  [33m^--- Wrong number of args (2) passed to: core/inc[0m
+  [36m62[0m  [36m;#(when active[0m
+  [36m63[0m  [36m   #(conj % (circle color))))]]))[0m
+
+[36m----  Analysis Error : Please see src/cljs/q4/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.971 seconds.[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.874 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.961 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.875 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.818 seconds.[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.712 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.791 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.775 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.863 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/q4/core.js
+Notifying browser that CSS file changed: resources/public/css/screen.css
+Notifying browser that CSS file changed: resources/public/css/screen.css
