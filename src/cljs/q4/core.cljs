@@ -70,10 +70,15 @@
       (update hover-table (inc hov-col) make-hover-cell)]]))
 
 (defn game-chooser []
-  [:div.chooser "What do you want to play?"
-   [:div {:on-click #(rf/dispatch [:choose-game :quaint])} "Quaint"]
-   [:div {:on-click #(rf/dispatch [:choose-game :quasi])}  "Quasi"]
-   [:div {:on-click #(rf/dispatch [:choose-game :quantum])} "Quantum"]])
+  [:div.chooser
+   [:div {:style {:margin-bottom "20px" :font-size "45px"}} "What do you want to play?"]
+   [:div [:span.pointer {:on-click #(rf/dispatch [:choose-game :quaint])}
+          "Quaint"]]
+   [:div.game-def "Make connections on the game board"]
+   [:div [:span.pointer {:on-click #(rf/dispatch [:choose-game :quasi])} "Quasi"]]
+   [:div.game-def "Quaint rules, plus make connections across the edges"]
+   [:div [:span.pointer {:on-click #(rf/dispatch [:choose-game :quantum])} "Quantum"]]
+   [:div.game-def " Quasi rules, plus make connections across the top and bottom"]])
 
 (defn bg-perp []
   [:div.perp

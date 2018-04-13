@@ -42,12 +42,21 @@ body {
  .chooser {
     text-align: center;
     font-size: 30px;
-    padding-top: 30vh;
+    line-height: 30px;
+    padding-top: 25vh;
  }
+.game-def {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px
+}
 .game-notes {
     font-size: 30px;
     display: inline-block;
     margin: 10px 100px 0 100px;
+}
+.pointer {
+    cursor: pointer;
 }
 
 .perp {
