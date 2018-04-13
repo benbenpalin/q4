@@ -2,7 +2,13 @@
 
 generated using Luminus version "2.9.12.25"
 
-FIXME
+Quantum Four is an updated version of the classic two-player game where the goal is to get four in a row.
+
+The most recent version of the game can be played at www.quantumfour.co
+
+NOTE: This project was initially started in another repository, using the standard re-frame template.
+That code was moved to this repository, created with the more robust luminus template.
+The original code can be seen at https://github.com/benbenpalin/quantum-four
 
 ## Prerequisites
 
@@ -18,4 +24,4 @@ To start a web server for the application, run:
 
 ## License
 
-Copyright © 2018 FIXME
+Copyright © 2018 Ben Palin
