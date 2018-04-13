@@ -90,7 +90,8 @@
 
 (defn main-panel []
   (let [chosen? @(rf/subscribe [:game-chosen])
-        active? @(rf/subscribe [:active])]
+        active? @(rf/subscribe [:active])
+        alert   @(rf/subscribe [:alert])]
     [:div
      [bg-perp]
      [:div.main-page
@@ -102,15 +103,25 @@
          [:div.board
           [table-board]]
          [:div.below
-          [:p.game-notes "Turn: "
-           (let [turn @(rf/subscribe [:turn])]
-             (if (= turn :r)
-               "Red"
-               "Black"))]
-          [:p.game-notes "Alerts: " @(rf/subscribe [:alert])]
-          (if-not active?
-            [:p.game-notes {:on-click #(rf/dispatch [:play-again])}
-             "Play again"])]])]]))
+          (when active?
+            [:div {:style {:font-size "30px"}}
+             "Turn: "
+             (let [turn @(rf/subscribe [:turn])]
+               (if (= turn :r)
+                 "Red"
+                 "Black"))])
+          [:div
+           [:div.game-notes (str (when (and active?
+                                            (not (empty? alert)))
+                                   "Alert: ")
+                                 alert)]
+           (when-not active?
+             [:div.game-notes {:style {:border "2px solid black"
+                                       :border-radius "20px"
+                                       :padding "0 10px 0 10px"
+                                       :cursor "pointer"}
+                               :on-click #(rf/dispatch [:play-again])}
+              "Play again"])]]])]]))
 
 (defn home-page []
   [:div

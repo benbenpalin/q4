@@ -46,6 +46,8 @@ body {
  }
 .game-notes {
     font-size: 30px;
+    display: inline-block;
+    margin: 10px 100px 0 100px;
 }
 
 .perp {
