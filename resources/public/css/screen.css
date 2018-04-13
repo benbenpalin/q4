@@ -1,6 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Do+Hyeon);
+
 html,
 body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Do Hyeon', Helvetica, Arial, sans-serif;
     height: 100%;
     background: radial-gradient(white, dodgerblue, darkblue);
 }
@@ -26,20 +28,37 @@ body {
  	border-radius: 50px;
  }
  .board {
-     width: 730px;
-     height: 626px;
-     margin: 0 auto;
-     background-color: rgba(0,0,255,0.4)
+    width: 730px;
+    height: 626px;
+    margin: 0 auto;
+    background-color: rgba(0,0,255,0.4)
  }
  .below {
-     text-align: center;
+    text-align: center;
  }
  h1 {
-     text-align: center;
+    text-align: center;
  }
  .chooser {
-     text-align: center;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 25vh;
  }
+.game-def {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px
+}
+.game-notes {
+    font-size: 30px;
+    display: inline-block;
+    margin: 10px 100px 0 100px;
+}
+.pointer {
+    cursor: pointer;
+}
+
 .perp {
   margin-left: auto;
   margin-right: auto;

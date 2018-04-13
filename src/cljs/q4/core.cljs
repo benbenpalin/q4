@@ -70,10 +70,15 @@
       (update hover-table (inc hov-col) make-hover-cell)]]))
 
 (defn game-chooser []
-  [:div.chooser "What do you want to play?"
-   [:div {:on-click #(rf/dispatch [:choose-game :quaint])} "Quaint"]
-   [:div {:on-click #(rf/dispatch [:choose-game :quasi])}  "Quasi"]
-   [:div {:on-click #(rf/dispatch [:choose-game :quantum])} "Quantum"]])
+  [:div.chooser
+   [:div {:style {:margin-bottom "20px" :font-size "45px"}} "What do you want to play?"]
+   [:div [:span.pointer {:on-click #(rf/dispatch [:choose-game :quaint])}
+          "Quaint"]]
+   [:div.game-def "Make connections on the game board"]
+   [:div [:span.pointer {:on-click #(rf/dispatch [:choose-game :quasi])} "Quasi"]]
+   [:div.game-def "Quaint rules, plus make connections across the edges"]
+   [:div [:span.pointer {:on-click #(rf/dispatch [:choose-game :quantum])} "Quantum"]]
+   [:div.game-def " Quasi rules, plus make connections across the top and bottom"]])
 
 (defn bg-perp []
   [:div.perp
@@ -90,11 +95,12 @@
 
 (defn main-panel []
   (let [chosen? @(rf/subscribe [:game-chosen])
-        active? @(rf/subscribe [:active])]
+        active? @(rf/subscribe [:active])
+        alert   @(rf/subscribe [:alert])]
     [:div
      [bg-perp]
      [:div.main-page
-      [:h1 "Quantum Four"]
+      [:h1 {:style {:font-size "100px"}} "Quantum Four"]
       (if-not chosen?
         [game-chooser chosen?]
         [:div
@@ -102,16 +108,25 @@
          [:div.board
           [table-board]]
          [:div.below
-          [:p "Turn: "
-           (let [turn @(rf/subscribe [:turn])]
-             (if (= turn :r)
-               "Red"
-               "Black"))]
-          [:p "Alerts: " @(rf/subscribe [:alert])]
-          (if-not active?
-            [:p
-             {:on-click #(rf/dispatch [:play-again])}
-             "Play again"])]])]]))
+          (when active?
+            [:div {:style {:font-size "30px"}}
+             "Turn: "
+             (let [turn @(rf/subscribe [:turn])]
+               (if (= turn :r)
+                 "Red"
+                 "Black"))])
+          [:div
+           [:div.game-notes (str (when (and active?
+                                            (not (empty? alert)))
+                                   "Alert: ")
+                                 alert)]
+           (when-not active?
+             [:div.game-notes {:style {:border "2px solid black"
+                                       :border-radius "20px"
+                                       :padding "0 10px 0 10px"
+                                       :cursor "pointer"}
+                               :on-click #(rf/dispatch [:play-again])}
+              "Play again"])]]])]]))
 
 (defn home-page []
   [:div
