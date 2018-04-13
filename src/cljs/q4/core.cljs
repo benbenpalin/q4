@@ -94,7 +94,7 @@
     [:div
      [bg-perp]
      [:div.main-page
-      [:h1 "Quantum Four"]
+      [:h1 {:style {:font-size "100px"}} "Quantum Four"]
       (if-not chosen?
         [game-chooser chosen?]
         [:div
@@ -102,15 +102,14 @@
          [:div.board
           [table-board]]
          [:div.below
-          [:p "Turn: "
+          [:p.game-notes "Turn: "
            (let [turn @(rf/subscribe [:turn])]
              (if (= turn :r)
                "Red"
                "Black"))]
-          [:p "Alerts: " @(rf/subscribe [:alert])]
+          [:p.game-notes "Alerts: " @(rf/subscribe [:alert])]
           (if-not active?
-            [:p
-             {:on-click #(rf/dispatch [:play-again])}
+            [:p.game-notes {:on-click #(rf/dispatch [:play-again])}
              "Play again"])]])]]))
 
 (defn home-page []
