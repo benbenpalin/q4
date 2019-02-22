@@ -4,7 +4,7 @@ generated using Luminus version "2.9.12.25"
 
 Quantum Four is an updated version of the classic two-player game where the goal is to get four in a row.
 
-The most recent version of the game can be played at www.quantumfour.co
+The most recent version of the game can be played at https://quantum4.herokuapp.com/
 
 NOTE: This project was initially started in another repository, using the standard re-frame template.
 That code was moved to this repository, created with the more robust luminus template.
